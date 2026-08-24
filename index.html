@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raya Store | Elegant Women's Boutique | Indiranagar, Bengaluru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { 50: '#fdf2f8', 500: '#db2777', 600: '#be185d' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content { display: none; }
+        .accordion-active .accordion-content { display: block; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Top Bar -->
+    <div class="bg-stone-900 text-white text-xs py-2 px-4 text-center">
+        <span class="flex items-center justify-center gap-2">
+            <span class="text-yellow-400">★ 4.9/5 on Google</span> | 120+ Verified Local Reviews | Visit us in Indiranagar, Bengaluru
+        </span>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-stone-200">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-2xl font-display font-bold tracking-tight text-brand-600">RAYA STORE</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                <a href="#about" class="hover:text-brand-600 transition">Our Story</a>
+                <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+            </div>
+            <a href="#booking" class="bg-stone-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-600 transition">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 bg-pink-100 text-brand-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                <span>✨ 4.9★ Google Rating</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-display font-bold leading-tight mb-6">Elevating Your Boutique Experience.</h1>
+            <p class="text-lg text-stone-600 mb-8">From Instagram DMs to a seamless digital storefront. Let us help you transform your boutique operations in Indiranagar with a bespoke e-commerce strategy.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#booking" class="bg-brand-600 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-500 transition">Book Consultation</a>
+                <a href="https://wa.me/919901567576?text=Hello%20Raya%20Store,%20I%20want%20to%20inquire%20about%20your%20services." class="border border-stone-300 px-8 py-4 rounded-full font-bold hover:bg-stone-100 transition">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="bg-gradient-to-br from-pink-200 to-rose-300 h-96 rounded-3xl flex items-center justify-center p-8 shadow-2xl">
+            <div class="bg-white p-6 rounded-2xl w-full max-w-sm shadow-xl transform rotate-3">
+                <div class="h-2 w-16 bg-stone-200 rounded mb-4"></div>
+                <div class="h-6 w-3/4 bg-stone-800 rounded mb-6"></div>
+                <div class="flex gap-4">
+                    <div class="h-20 w-20 bg-stone-100 rounded-lg"></div>
+                    <div class="h-20 w-20 bg-stone-100 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-display font-bold mb-12 text-center">Our Core Offerings</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                    {t: "Strategy", d: "Signature Consultation & Strategy for brand growth."},
+                    {t: "Turnaround", d: "End-to-end implementation & digital transformation."},
+                    {t: "Enterprise", d: "Scalable e-commerce infrastructure management."},
+                    {t: "Support", d: "VIP 24/7 dedicated operational support."}
+                ].map(s => (
+                    <div class="border border-stone-200 p-8 rounded-2xl hover:border-brand-600 transition">
+                        <h3 class="font-bold text-xl mb-3">{s.t}</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">{s.d}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 max-w-3xl mx-auto px-6">
+        <div class="bg-stone-900 text-white p-10 rounded-3xl">
+            <h2 class="text-3xl font-display font-bold mb-2">Book Your Strategy Session</h2>
+            <p class="text-stone-400 mb-8">Ready to scale your boutique? Send us a quick inquiry.</p>
+            <form id="bookingForm" class="space-y-4">
+                <input type="text" placeholder="Your Name" required class="w-full p-4 rounded-lg bg-stone-800 border-none outline-none focus:ring-2 focus:ring-brand-500">
+                <input type="email" placeholder="Your Email" required class="w-full p-4 rounded-lg bg-stone-800 border-none outline-none focus:ring-2 focus:ring-brand-500">
+                <textarea placeholder="Tell us about your boutique..." class="w-full p-4 rounded-lg bg-stone-800 border-none outline-none focus:ring-2 focus:ring-brand-500 h-32"></textarea>
+                <button type="submit" class="w-full bg-brand-600 py-4 rounded-lg font-bold hover:bg-brand-500 transition">Submit Request</button>
+            </form>
+            <div id="formFeedback" class="hidden mt-6 p-4 bg-green-500/20 text-green-300 rounded-lg text-center font-medium">
+                Thank you! We'll reach out to you within 24 hours.
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-stone-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-display font-bold mb-8">Common Questions</h2>
+            <div class="space-y-4">
+                <div class="accordion border-b border-stone-300 pb-4">
+                    <button class="flex justify-between w-full font-bold text-lg" onclick="this.parentElement.classList.toggle('accordion-active')">
+                        How does the consultation work? <span>+</span>
+                    </button>
+                    <div class="accordion-content pt-4 text-stone-600">We analyze your current Instagram/WhatsApp workflow and suggest a tailored digital migration roadmap to boost your ROI.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info & Footer -->
+    <footer class="bg-white border-t border-stone-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h4 class="font-bold mb-4">Raya Store</h4>
+                <p class="text-stone-600">Indiranagar, Bengaluru, KA</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-stone-600">Phone: +91 99015 67576</p>
+                <p class="text-stone-600">Email: contact@rayastore.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Hours</h4>
+                <p class="text-stone-600">Mon-Sat: 10:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-stone-400 text-sm">© 2023 Raya Store. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('formFeedback').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
